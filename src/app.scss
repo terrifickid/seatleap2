@@ -1,0 +1,18 @@
+.blue{color: #004168;}
+.dblue{color: #00123f;}
+// Then import Bootstrap an BootstrapVue SCSS files (order is important)
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+body,html{font-size: 15px;}
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+* {
+    font-family: 'Roboto', sans-serif;
+   }
+@import url('https://use.typekit.net/ybt7pdi.css');
+
+
+.btn{letter-spacing: 0.05rem;  }
+.btn-light{color: #3a3f43; border: 2px solid #3a3f43; padding: 0.6rem 0;}
+.btn-light:hover{border: 2px solid #3a3f43; }
+.bold{font-weight: 500;}
