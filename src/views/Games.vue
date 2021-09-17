@@ -5,7 +5,7 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <h4 class="mb-0">Today's Games</h4>
+            <h4 class="mb-0 text-white">Today's Games</h4>
             <p class="mb-0">Thursday, April 27, 2017 8:00PM</p>
           </div><!-- end col -->
         </div>
