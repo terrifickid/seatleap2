@@ -18,7 +18,7 @@
         <p class="mt-3 dblue" style="margin-bottom: 15rem;" ><small>Must be 21 years or older to participate. Upgrades are<br> available on a first come, first served basis.</small></p>
       </div>
       <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
-        <button class="btn bold btn-light btn-lg text-uppercase btn-block mb-4">Get My Seats</button>
+        <router-link to="/games" class="btn bold btn-light btn-lg text-uppercase btn-block mb-4">Get My Seats</router-link>
         <img src="../assets/coors/landing-bottom-image.png" class="img-fluid">
       </div>
     </div>
@@ -29,7 +29,7 @@
 
 
 export default {
-  name: 'Home',
+  name: 'Landing',
   components: {
 
   }
@@ -37,6 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+small{line-height: 1.25rem; display: block;}
 .home{
   padding: 4rem 0rem 1rem 0rem;
   background: url('../assets/coors/landing-bg.png');
@@ -45,5 +46,5 @@ export default {
   min-height: 100vh;
 }
 
-h1{font-size: 2.5rem; font-weight: bold; font-family: 'brandon-grotesque'}
+h1{font-size: 2.75rem; font-weight: bold; font-family: 'brandon-grotesque'}
 </style>
