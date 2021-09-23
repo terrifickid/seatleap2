@@ -7,7 +7,15 @@
     <router-view/>
   </div>
 </template>
-
+<script>
+export default{
+  components:{
+  },
+  mounted(){
+  
+  }
+}
+</script>
 <style lang="scss">
 
 </style>

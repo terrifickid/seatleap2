@@ -26,12 +26,16 @@
 </template>
 
 <script>
-
-
+import axios from 'axios';
 export default {
   name: 'Landing',
   components: {
 
+  },
+  async mounted(){
+    var res = await axios.get(process.env.VUE_APP_URI+'/verify/'+this.$route.params.code);
+    this.$store.commit('setData',res.data);
+    console.log('data is', res.data);
   }
 }
 </script>

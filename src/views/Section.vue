@@ -1,12 +1,12 @@
 <template>
   <div class="games">
-
+<pre>{{data}}</pre>
     <div class="blue-header text-center text-white py-3">
       <div class="container">
         <div class="row">
           <div class="col">
             <h4 class="mb-0 text-white">Today's Game</h4>
-            <p class="mb-0">Thursday, April 27, 2017 8:00PM</p>
+            <p class="mb-0">{{data.event.event.local_date}}</p>
           </div><!-- end col -->
         </div>
       </div>
@@ -35,19 +35,19 @@
               <ul>
                 <li class="pad">
                   <div class="row">
-                    <div class="col"><h4 class="fbg">Section 101<br>Row 5</h4></div><div class="col text-right"><h5 class="font-weight-bold">4 Seats</h5></div>
+                    <div class="col"><h4 class="fbg">Section {{selected.seating.section}}<br>Row {{selected.seating.row}}</h4></div><div class="col text-right"><h5 class="font-weight-bold">?? Seats</h5></div>
                   </div>
                 </li>
                 <li>
                   <ul>
                       <li class="pad">
                         <div class="row d-flex align-items-center">
-                          <div class="col"><h4 class="fbg mb-0">Price (EA)</h4></div><div class="col text-right"><h5 class="font-weight-bold lblue mb-0 text-bold">$0</h5></div>
+                          <div class="col"><h4 class="fbg mb-0">Price (EA)</h4></div><div class="col text-right"><h5 class="font-weight-bold lblue mb-0 text-bold">${{selected.price_per}}</h5></div>
                         </div>
                       </li>
                       <li style="border: 0;" class="pad">
                         <div class="row d-flex align-items-center">
-                          <div class="col"><h4 class="fbg mb-0">Total (USD)</h4></div><div class="col text-right"><h5 class="font-weight-bold lblue mb-0 text-bold">$0</h5></div>
+                          <div class="col"><h4 class="fbg mb-0">Total (USD)</h4></div><div class="col text-right"><h5 class="font-weight-bold lblue mb-0 text-bold">$??</h5></div>
                         </div>
                       </li>
                   </ul>
@@ -73,6 +73,21 @@
 
   </div><!-- end games -->
 </template>
+<script>
+export default{
+computed:{
+  data() {
+    return this.$store.state.data;
+  },
+  selected(){
+    var filter = this.data.tickets.tickets.filter((ticket) => {
+      if(ticket.id == this.$route.params.id) return true;
+    });
+    return filter[0];
+  }
+}
+}
+</script>
 <style>
   ul{list-style: none; margin:0; padding:0;}
   ul ul{margin-left: 3rem;}

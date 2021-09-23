@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h1 class="text-uppercase text-white mt-3 mb-5">Get ready<br>to chill</h1>
+          <h1 class="text-uppercase text-white mt-3 mb-4">Get ready<br>to chill</h1>
           <h4 style="letter-spacing: 0.1rem;" class=" fbg text-uppercase font-weight-bold text-white">Your new seats will be<br>sent to your email</h4>
         </div>
       </div><!-- end col -->

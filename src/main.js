@@ -10,14 +10,10 @@ import './app.scss';
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
-
-
-
-
 Vue.config.productionTip = false
-
 new Vue({
   router,
   store,
+  beforeCreate() { this.$store.commit('initialiseStore');},
   render: function (h) { return h(App) }
 }).$mount('#app')

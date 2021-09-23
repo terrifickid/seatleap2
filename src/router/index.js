@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/ticket/:code',
     name: 'Landing',
     component: Landing
   },
@@ -19,7 +19,7 @@ const routes = [
     }
   },
   {
-    path: '/section',
+    path: '/section/:id',
     name: 'Section',
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/Section.vue')
