@@ -1,6 +1,5 @@
 <template>
   <div class="games">
-<pre>{{data}}</pre>
     <div class="blue-header text-center text-white py-3">
       <div class="container">
         <div class="row">
